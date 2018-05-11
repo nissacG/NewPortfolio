@@ -2,8 +2,9 @@ var express 	= require("express"),
 	nodemailer 	= require("nodemailer"),
 	bodyParser 	= require("body-parser"),
 	flash       = require("connect-flash"),
-	session		= require("express-session"),
-	app 		= express()
+	session		  = require("express-session"),
+  config      = require("./config.js"), 
+	app 		    = express()
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
@@ -35,8 +36,8 @@ app.post("/contact", function (req, res) {
   	secure: "true",
     auth: {
         type: "OAuth2",
-        clientId: clientId,
-        clientSecret: clientSecret
+        clientId: config.clientId,
+        clientSecret: config.clientSecret
     }
   });
   mailOpts = {
@@ -45,12 +46,12 @@ app.post("/contact", function (req, res) {
     subject: "New message from contact form at garethcassin.co.uk",
     text: "Name: " + req.body.name +". " + "\n" +
     "Email: " + req.body.email +". " + "\n" +
-    "Number: " + req.body.number +". " + "\n" +
+    "Number: " + req.body.phone +". " + "\n" +
     "Message: " + req.body.message +".", 
     auth: {
 		user: "nissacjg@gmail.com",
-        refreshToken: refreshToken,
-        accessToken: accessToken,
+        refreshToken: config.refreshToken,
+        accessToken: config.accessToken,
         expires: 1484314697598
     }
   };
@@ -68,7 +69,7 @@ app.post("/contact", function (req, res) {
 
 
 
-// app.listen(5000, function(){
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(5000, function(){
+// app.listen(process.env.PORT, process.env.IP, function(){
     console.log("New Portfolio Server Started!");
 });
