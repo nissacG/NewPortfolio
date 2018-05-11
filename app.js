@@ -35,8 +35,8 @@ app.post("/contact", function (req, res) {
   	secure: "true",
     auth: {
         type: "OAuth2",
-        clientId: "***********************",
-        clientSecret: "***********************"
+        clientId: clientId,
+        clientSecret: clientSecret
     }
   });
   mailOpts = {
@@ -49,8 +49,8 @@ app.post("/contact", function (req, res) {
     "Message: " + req.body.message +".", 
     auth: {
 		user: "nissacjg@gmail.com",
-        refreshToken: "***********************",
-        accessToken: "***********************",
+        refreshToken: refreshToken,
+        accessToken: accessToken,
         expires: 1484314697598
     }
   };
