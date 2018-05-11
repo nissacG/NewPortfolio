@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/portfolio.css">
+    <title>Gareth Cassin Portfolio</title>
+    <link rel="icon" type="image/png" href="/img/favicon.ico">
+</head>
+<body id="page-top">
+    <!-- NAVBAR -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-light text-right py-0" id="mainNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">GC</a>
+        <!-- <img id="logo" src="https://dl.dropboxusercontent.com/s/rb2747oyfp5vvjo/G%20milkshake%20text%20%23612ead%20design.png?dl=0" alt="G logo"> -->
+        <button class="navbar-toggler navbar-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto" id="menu">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#portfolio">My Work</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- NAVBAR END -->
+
+    <!--  Header/Banner  -->
+    <header class="masthead">
+        <div class="container">
+            <div class="intro-text">
+                            <div class="container">
+                <% if(error && error.length > 0){ %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= error %>
+                    </div>
+                <% } %>
+                <% if(success && success.length > 0){ %>
+                    <div class="alert alert-success" role="alert">
+                        <%= success %>
+                    </div>
+                <% } %>
+            </div>
+                <img class="header-img" src="https://scontent-lht6-1.cdninstagram.com/vp/b537a2810790a507cdf83244fc8b3c46/5B82B4AA/t51.2885-15/s640x640/sh0.08/e35/c180.0.720.720/30593599_938124419645580_7311734217128280064_n.jpg">
+                <div class="intro-lead-in" id="slide">Gareth Cassin.</div>
+                <a class="js-scroll-trigger" href="#about"><i class="fas fa-chevron-down fa-3x"></i></a>
+            </div>
+        </div>
+    </header>
+    <!--  Header/Banner END -->
+
+    <!-- About Me - about/What i can do |html,css etc| -->
+    <section class="about" id="about">
+        <h2 class="section-heading">About Me.</h2>
+        <h3 class="section-subheading">Always learning. Here's what I know so far...</h3>
+        <ul class="grid">
+            <li class="skills">
+                <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x icon-primary"></i>
+                <i class="fab fa-html5 fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="skills-heading">HTML</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </li>
+            <li class="skills">
+                <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x icon-primary"></i>
+                <i class="fab fa-css3-alt fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="skills-heading">CSS</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </li>
+            <li class="skills">
+                <span class="fa-stack fa-4x">
+                <i class="fa fa-circle fa-stack-2x icon-primary"></i>
+                <i class="fab fa-node-js fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="skills-heading">node-js</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            </li>
+        </ul>  
+    </section>
+    <!-- About Me END -->
+
+    <!-- My Work -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-heading">My Work.</h2>
+        <h3 class="section-subheading text-muted">Always making new things. Here's a sample of my current projects...</h3>
+        <ul class="grid">
+            <li class="small-image portfolio-item" style="background-image: url(https://dl.dropboxusercontent.com/s/ob6gqb8tz13mumg/Screenshot%202018-02-18%2023.56.43.png?dl=0);" alt="Yelpcamp homepage screenshot">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fa fa-plus fa-2x"></i>
+                        <h4>YelpCamp</h4>
+                        <p>YelpCamp Landing Page</p>
+                    </div>
+                </div>
+                </a>
+            </li>
+            <li class="large-image portfolio-item" style="background-image: url(https://dl.dropboxusercontent.com/s/ps3ajrydt1rmlot/Screenshot%202018-02-20%2016.43.02.png?dl=0);" alt="Yelpcamp Login screenshot">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fas fa-link fa-2x"></i>
+                        <h4>YelpCamp</h4>
+                        <p>YelpCamp Login Page</p>
+                    </div>
+                </div>
+                </a>
+            </li>
+            <li class="large-image portfolio-item" style="background-image: url(https://dl.dropboxusercontent.com/s/ybvezndwgs36efo/Screenshot%202018-02-20%2010.02.11.png?dl=0);" alt="Willma homepage screenshot"> 
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fas fa-expand fa-2x"></i>
+                        <h4>Willma</h4>
+                        <p>Landing Page with video background</p>
+                    </div>
+                </div>
+                </a>
+            </li>
+            <li class="small-image portfolio-item" style="background-image: url(https://dl.dropboxusercontent.com/s/khq4t1v7mdzxvzq/Screenshot%202018-02-20%2010.02.42.png?dl=0);" alt="Willma Index screenshot">
+                <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+                <div class="portfolio-hover">
+                    <div class="portfolio-hover-content">
+                        <i class="fa fa-plus"></i>
+                        <h4>Willma </h4>
+                        <p>Home page with images</p>
+                    </div>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- MY WORK END -->
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-heading">Contact</h2>
+            <h3 class="section-subheading">This section will blow your mind!</h3>
+            <div class="row col-sm-12">
+                <div class="col-sm-6">
+                    <div class="m-0 p-0" id="map">
+                        <iframe width="100%" height="355px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3243393342877!2d-0.09008053455388211!3d51.52561071719297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdf2c75461039688e!2sOld+Street!5e0!3m2!1sen!2suk!4v1519123104313" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <form class="contact-form" action="contact" id="contact-form" method="post" role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Mobile No.">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control textarea-contact" rows="5" id="message" name="message" placeholder="Type Your Message/Feedback here" required=""></textarea>
+                        <br>
+                        <button class="btn btn-default btn-send btn-block" id="send-button" type="submit"><span class="fab fa-telegram-plane"></span> Send </button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>  
+    </section>
+    <!-- CONTACT END -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">
+                    &copy; 2017-2018 GarethCassin 
+                    </span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/nissacjg">
+                            <i class="fab fa-twitter fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://github.com/nissacG">
+                            <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.linkedin.com/in/gareth-cassin-88a75456/">
+                            <i class="fab fa-linkedin-in fa-2x"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="mailto:nissacjg@gmail.com">
+                            <i class="fas fa-at fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item">
+                            <a href="#">Privacy</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#">Terms of Use</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#page-top"><i class="fas fa-arrow-circle-up fa-2x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <!-- Modal1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <a class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- //Project Details Go Here// -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="https://dl.dropboxusercontent.com/s/ob6gqb8tz13mumg/Screenshot%202018-02-18%2023.56.43.png?dl=0" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li><span>Date: </span>January 2018</li>
+                                    <li><span>Client: </span> FCC</li>
+                                </ul>
+                                <a href="" data-dismiss="modal">
+                                    <i class="fas fa-times fa-2x"></i>
+                                </a>
+                                <a href="https://www.google.co.uk" target="_blank">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL 1 END -->
+
+    <!-- Modal2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <a class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl"></div>
+                    </div>
+                </a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="modal-body">
+                                <!-- //Project Details Go Here// -->
+                                <h2 class="text-uppercase">Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-fluid d-block mx-auto" src="https://dl.dropboxusercontent.com/s/ob6gqb8tz13mumg/Screenshot%202018-02-18%2023.56.43.png?dl=0" alt="">
+                                <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                                <ul class="list-inline">
+                                    <li><span>Date: </span>January 2018</li>
+                                    <li><span>Client: </span> FCC</li>
+                                </ul>
+                                <a href="" data-dismiss="modal">
+                                    <i class="fas fa-times fa-2x"></i>
+                                </a>
+                                <a href="https://www.google.co.uk" target="_blank">
+                                    <i class="fas fa-external-link-alt fa-2x"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MODAL 2 END -->
+
+<!-- Scripts -->
+    <script type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/js/portfolio.js"></script>
+</body>
+</html>
