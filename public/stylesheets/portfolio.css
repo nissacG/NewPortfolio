@@ -115,6 +115,10 @@ ul {
   list-style: none;
 }
 
+.alert {
+  text-align: center;
+}
+
 /*Navbar styling*/
 
 #mainNav {

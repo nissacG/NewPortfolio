@@ -9,12 +9,12 @@ var express 	= require("express"),
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + "/public"));
-app.set('trust proxy', 1); //Remove when site is live on HTTPS
+app.set("trust proxy", 1); //Remove when site is live on HTTPS
 app.use(session({
     secret: "woot",
     resave: false,
     saveUninitialized: false, 
-    cookie: {secure: true}
+    // cookie: {secure: true}
 }));
 app.use(flash());
 app.use(function(req, res, next){
@@ -58,12 +58,13 @@ app.post("/contact", function (req, res) {
   transporter.sendMail(mailOpts, function (error, response) {
     if (error) {
     	console.log(error);
-    	res.render("portfolio", {error: "Sorry, there has been an error. Please contact directly via email."});
+      req.flash(" error", "Sorry, there has been an error. Please contact directly via email.");
+      res.redirect("/#contact");
     }
     else {
-      	// req.flash("success", "Thanks for getting in touch! I will respond as soon as I can.");
-      	res.render("portfolio", {success: "Thanks for getting in touch! I will respond as soon as I can."});
-    }
+    	req.flash("success", "Thanks for getting in touch! I will respond as soon as I can.");
+      res.redirect("/#contact");
+  }
   });
 });
 

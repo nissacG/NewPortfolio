@@ -39,18 +39,7 @@
     <header class="masthead">
         <div class="container">
             <div class="intro-text">
-                            <div class="container">
-                <% if(error && error.length > 0){ %>
-                    <div class="alert alert-danger" role="alert">
-                        <%= error %>
-                    </div>
-                <% } %>
-                <% if(success && success.length > 0){ %>
-                    <div class="alert alert-success" role="alert">
-                        <%= success %>
-                    </div>
-                <% } %>
-            </div>
+
                 <img class="header-img" src="https://scontent-lht6-1.cdninstagram.com/vp/b537a2810790a507cdf83244fc8b3c46/5B82B4AA/t51.2885-15/s640x640/sh0.08/e35/c180.0.720.720/30593599_938124419645580_7311734217128280064_n.jpg">
                 <div class="intro-lead-in" id="slide">Gareth Cassin.</div>
                 <a class="js-scroll-trigger" href="#about"><i class="fas fa-chevron-down fa-3x"></i></a>
@@ -151,6 +140,18 @@
             <h2 class="section-heading">Contact</h2>
             <h3 class="section-subheading">This section will blow your mind!</h3>
             <div class="row col-sm-12">
+                <div class="container">
+                    <% if(error && error.length > 0){ %>
+                        <div class="alert alert-danger" role="alert">
+                            <%= error %>
+                        </div>
+                    <% } %>
+                    <% if(success && success.length > 0){ %>
+                        <div class="alert alert-success" role="alert">
+                            <%= success %>
+                        </div>
+                    <% } %>
+                </div>
                 <div class="col-sm-6">
                     <div class="m-0 p-0" id="map">
                         <iframe width="100%" height="355px;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.3243393342877!2d-0.09008053455388211!3d51.52561071719297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdf2c75461039688e!2sOld+Street!5e0!3m2!1sen!2suk!4v1519123104313" allowfullscreen></iframe>
