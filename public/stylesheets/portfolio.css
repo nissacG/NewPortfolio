@@ -71,7 +71,7 @@ section h2.section-heading {
 section h3.section-subheading {
   font-size: 18px;
   font-style: italic;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
   text-transform: none;
   text-align: center;
   font-weight: 200;
@@ -258,6 +258,9 @@ header.masthead .intro-text .intro-lead-in {
 }
 
 /*About Me Styling*/
+section.about {
+  padding-bottom: 0;
+}
 
 .about .grid {
   flex-direction: row;
@@ -268,8 +271,20 @@ header.masthead .intro-text .intro-lead-in {
 .skills {
   text-align: center;
   margin: 20px;
-  width: 300px;
+  /*width: 300px;*/
   flex: 1 1 300px;
+}
+
+@media (min-width: 768px) {
+  .skills {
+    flex: 1 1 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skills {
+    flex: 1 1 250px;
+  }
 }
 
 .skills p , .skills h4 {
@@ -414,7 +429,12 @@ header.masthead .intro-text .intro-lead-in {
 
 .portfolio-modal .modal-content img {
   margin-bottom: 20px;
-  max-width: 550px;
+}
+
+@media screen and (min-width: 600px){
+  .portfolio-modal .modal-content img {
+    max-width: 500px;
+  }
 }
 
 .portfolio-modal .modal-content a i.fa-times{
@@ -426,6 +446,7 @@ header.masthead .intro-text .intro-lead-in {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
+    z-index: 5;
 }
 
 .portfolio-modal .close-modal {
