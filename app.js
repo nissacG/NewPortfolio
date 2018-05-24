@@ -44,17 +44,17 @@ app.post("/contact", function (req, res) {
     from: req.body.name + " &lt;" + req.body.email + "&gt;",
     to: "nissacjg@gmail.com",
     subject: "New message from contact form at garethcassin.co.uk",
-    text: "Name: " + req.body.name +". " + "\n" +
-    "Email: " + req.body.email +". " + "\n" +
-    "Number: " + req.body.phone +". " + "\n" +
-    "Message: " + req.body.message +".", 
+    text: `Name: ${req.body.name}.
+    Email: ${req.body.email}. 
+    Number: ${req.body.phone}. 
+    Message: ${req.body.message}.`,
     auth: {
-		user: "nissacjg@gmail.com",
-        refreshToken: config.refreshToken,
-        accessToken: config.accessToken,
-        expires: 1484314697598
-    }
-  };
+  		user: "nissacjg@gmail.com",
+          refreshToken: config.refreshToken,
+          accessToken: config.accessToken,
+          expires: 1484314697598
+      }
+    };
   transporter.sendMail(mailOpts, function (error, response) {
     if (error) {
     	console.log(error);
