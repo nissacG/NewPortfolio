@@ -437,8 +437,8 @@ section.about {
   }
 }
 
-.portfolio-modal .modal-content a i.fa-times{
-  margin-right: 150px;
+.portfolio-modal .modal-content a i{
+  margin: 0 50px;
 }
 
 .portfolio-modal .modal-content .modal-body a,
