@@ -68,8 +68,6 @@ app.post("/contact", function (req, res) {
   });
 });
 
-
-
 // app.listen(5000, function(){
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("New Portfolio Server Started!");
