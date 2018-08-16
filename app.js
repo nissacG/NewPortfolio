@@ -1,10 +1,10 @@
 var express 	= require("express"),
-	nodemailer 	= require("nodemailer"),
-	bodyParser 	= require("body-parser"),
-	flash       = require("connect-flash"),
-	session		  = require("express-session"),
-  config      = require("./config.js"), 
-	app 		    = express()
+    nodemailer 	= require("nodemailer"),
+    bodyParser 	= require("body-parser"),
+    flash       = require("connect-flash"),
+    session		  = require("express-session"),
+    config      = require("./config.js"), 
+    app 		    = express();
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
@@ -13,7 +13,7 @@ app.set("trust proxy", 1); //Remove when site is live on HTTPS
 app.use(session({
     secret: "woot",
     resave: false,
-    saveUninitialized: false, 
+    saveUninitialized: false
     // cookie: {secure: true}
 }));
 app.use(flash());
@@ -21,7 +21,7 @@ app.use(function(req, res, next){
     res.locals.error = req.flash("error");
     res.locals.success = req.flash("success");
     next();
-})
+});
 
 app.get("/", function(req, res){
     res.render("portfolio");
@@ -50,11 +50,11 @@ app.post("/contact", function (req, res) {
     Message: ${req.body.message}.`,
     auth: {
   		user: "nissacjg@gmail.com",
-          refreshToken: config.refreshToken,
-          accessToken: config.accessToken,
-          expires: 1484314697598
-      }
-    };
+      refreshToken: config.refreshToken,
+      accessToken: config.accessToken,
+      expires: 1484314697598
+    }
+  };
   transporter.sendMail(mailOpts, function (error, response) {
     if (error) {
     	console.log(error);
@@ -64,7 +64,7 @@ app.post("/contact", function (req, res) {
     else {
     	req.flash("success", "Thanks for getting in touch! I will respond as soon as I can.");
       res.redirect("/#contact");
-  }
+    }
   });
 });
 
