@@ -21,9 +21,10 @@ p{
 a {
   color: var(--light-grey);
 }
-a:hover {
+a:hover{
   color: var(--dark-grey);
 }
+
 .icon-primary {
   color: var(--light-grey) !important;
 }
@@ -262,6 +263,16 @@ section.about {
   padding-bottom: 0;
 }
 
+.secondProfile {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.bold {
+  color: var(--darkest-grey);
+  font-weight: 700;
+}
+
 .about .grid {
   flex-direction: row;
   justify-content: space-around;
@@ -275,20 +286,12 @@ section.about {
   flex: 1 1 300px;
 }
 
-@media (min-width: 768px) {
-  .skills {
-    flex: 1 1 300px;
-  }
+.skills h4 {
+  margin-top: 50px;
+  padding: 0 20px;
 }
 
-@media (min-width: 1200px) {
-  .skills {
-    flex: 1 1 250px;
-  }
-}
-
-.skills p , .skills h4 {
-  margin-top: 20px;
+.skills p {
   padding: 0 20px;
 }
 
@@ -297,6 +300,40 @@ section.about {
   color: var(--darkest-grey);
 }
 
+.listSkills {
+  flex: 1 1 110px;
+}
+
+.logoCircle {
+  z-index: -1
+}
+
+.skillImg {
+  width: 60px;
+}
+
+#expressLogo {
+  font-size: 14px;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .skills {
+    flex: 1 1 300px;
+  }
+  .listSkills {
+    flex: 1 1 125px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skills {
+    flex: 1 1 250px;
+  }
+  .listSkills {
+    flex: 1 1 220px;
+  }
+}
 /*Portfolio Styling*/
 
 .portfolio {
@@ -347,6 +384,7 @@ section.about {
   right: 0;
   margin: 15px 0;
 }*/
+
 .portfolio .portfolio-item .portfolio-link {
   position: relative;
   display: block;
@@ -368,6 +406,7 @@ section.about {
 .portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
   opacity: 1;
 }
+
 .portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   position: absolute;
   top: 50%;
